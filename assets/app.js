@@ -1,14 +1,15 @@
-/*
- * Welcome to your app's main JavaScript file!
- *
- * We recommend including the built version of this JavaScript file
- * (and its CSS file) in your base layout (base.html.twig).
- */
+import './styles/app.scss';
+import 'jquery.scrollto';
 
-// any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+const $ = require('jquery');
+require('bootstrap');
 
-// Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
-// import $ from 'jquery';
+$(document).ready(function() {
+    $('[data-toggle="popover"]').popover();
+    $('#navbarSupportedContent').bind('click', 'ul li a', function(event) {
+        event.preventDefault();
+        $.scrollTo(event.target.hash, 250, {offset: -90});
+    });
+});
 
 console.log('Hello Webpack Encore! Edit me in assets/app.js');
