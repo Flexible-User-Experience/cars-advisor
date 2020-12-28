@@ -1,0 +1,217 @@
+{% extends "webpage/base.html.twig" %}
+
+{% block body %}
+    <div id="home" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/home.png') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container p-5">
+            <h1 class="display-1 text-white">{{ front_main_title | capitalize }}</h1>
+            <h2 class="display-4 text-white mb-0">Asesoría y Consultoría Psicológica</h2>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <p class="lead mb-0">Posibilízate es un servicio de atención psicológica donde podrás expresar, ordenar y comprender aquello que te sucede y transformarlo en aprendizajes que te permitan alcanzar un mayor grado de bienestar. Desarrollarás herramientas y estrategias que te permitan detectar y  gestionar las situaciones de dificultad o conflicto así como descubrir las capacidades que hay en ti para ponerlas en valor.</p>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-c-green-light text-black mb-0">
+        <div class="container">
+            <h3 class="mb-4">Te ayudo a que potencies tus capacidades y habilidades</h3>
+            <p class="lead mb-0"><strong>Para lograr un mayor grado de</strong> autonconocimiento, inteligencia y autonomía emocional, confianza en ti mism@, autoestima, creatividad, resiliencia, motivación y <u>bienestar</u>.</p>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="lead">Pongo a tu disposición un conjunto de instrumentos y metodologías basadas en las siguientes corrientes: psicología sistémica y humanista, terapia transpersonal, logoterapia, existencialismo, coaching, inteligencia emocional y PNL. Además de herramientas específicas para la gestión de <strong>conflictos</strong>, procesos de duelo y crisis vitales.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card text-center c-green-dark border-light">
+                        <img src="{{ asset('build/step.jpg') | imagine_filter('600xY') }}" class="card-img" alt="{{ front_main_title | capitalize }} foto principal">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title p-3" style="background-color:rgba(255, 255, 255, 0.85);">Te propongo dar hoy el primer paso</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="metodology" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/metodology.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container p-5">
+            <h1 class="text-white mb-0">Metodologia</h1>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card border-success mb-4">
+                        <img src="{{ asset('build/expression.jpg') | imagine_filter('348x232') }}" class="card-img-top" alt="Imagen sobre expresión y conciencia">
+                        <div class="card-body">
+                            <h5 class="card-title">Expresión y conciencia</h5>
+                            <p class="card-text mb-0">La expresión de los pensamientos, sentimientos y emociones es el primer paso para tomar conciencia y poder poner nombre a aquello que te está pasando.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card border-success mb-4">
+                        <img src="{{ asset('build/yarn.jpg') | imagine_filter('348x232') }}" class="card-img-top" alt="Imagen sobre comprensión y orden">
+                        <div class="card-body">
+                            <h5 class="card-title">Comprensión y orden</h5>
+                            <p class="card-text mb-0">Una vez identificados los elementos clave, el foco se traslada en comprender de manera integral y profunda aquello que genera sufrimiento, así como aprender a ordenar  los pensamientos y sentimientos. Ello, además de aliviar la situación presente, permite en muchas ocasiones trabajar en clave de prevención futura.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card border-success mb-4">
+                        <img src="{{ asset('build/bulb.jpg') | imagine_filter('348x232') }}" class="card-img-top" alt="Imagen sobre plan de accion">
+                        <div class="card-body">
+                            <h5 class="card-title">Plan de acción</h5>
+                            <p class="card-text mb-0"><strong>Si tenemos un "por qué", siempre encontraremos un "cómo".</strong> Todo proceso terapéutico supone una metamorfosis personal. Por ello, es probable que habiendo establecido claridad, puedan aparecer nuevos horizontes hacia los que dirigir tus pasos.  Te acompaño a dibujar una ruta y te animo a que consigas aquello que te hayas propuesto. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 class="mb-4">Elementos clave</h3>
+                    <p class="lead">
+                        Expresión e identificación de pensamientos y creencias, escucha activa, atención plena, reflexión crítica, metáforas, preguntas fuerza, estrategias de regulación, gestión del miedo y lo incierto, profundidad y pragmatismo, toma de decisiones, reformulación positiva, comunicación asertiva, creatividad en la búsqueda de alternativas, propósito, plan de acción, potencial y capacidad, objetivos vitales.
+                    </p>
+                    <p>
+                        El asesoramiento psicológico es un proceso en el que tu te conviertes en protagonista activ@. No se trata de recibir consejos, sino de estar dispuest@ a activar el potencial que hay en ti. Estableceremos un vínculo en el que, a través de la <strong>expresión</strong> de aquello que te abruma irás desarrollando estrategias que te permitirán identificar elementos clave del conflicto y poderlos atender, comprender y reformularlos para que puedas salir fortalecid@.
+                    </p>
+                    <p>
+                        Cada caso es único, pero a nivel general, en las primeras sesiones se trabaja sobre la <strong>capacidad de tomar conciencia</strong> aquellas cuestiones que están interfiriendo en el desarrollo pleno de tu persona. En muchas ocasiones, este <em>"darse cuenta"</em> es de por si un elemento liberador. Pero no suficiente; además de saber qué nos pasa, hemos de ordenarlo y comprenderlo para poderlo transcender.
+                    </p>
+                    <p class="mb-0">
+                        Comprender se basa en la reflexión y el autonocimiento, en <strong>descubrir el sentido profundo de aquello que está pasando</strong>. Aquí entra en juego el desarrollo de una <strong>actitud resiliente</strong> que facilitará desarrollar la capacidad de elección del camino que quieres seguir y un aprendizaje integrado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/services.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container p-5">
+            <h1 class="text-white mb-0">Servicios</h1>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card text-black bg-c-green-light mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Terapia Online</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="mb-0" style="padding-left:15px;">
+                                <li>Tienen una duración de 45 minutos</li>
+                                <li class="mt-3">Se realizan mediante skype o llamada telefónica</li>
+                                <li class="mt-3">El método de pago es mediante Bizum o transferencia (te facilitaré el número en el momento de la reserva)</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">Tiene un coste de <strong>30 <i class="fas fa-euro-sign"></i></strong></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card text-black bg-c-green mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Terapia Presencial</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="mb-0" style="padding-left:15px;">
+                                <li>Tienen una duración de 45 minutos</li>
+                                <li class="mt-3">Siguiendo todas las medidas de seguridad sanitarias</li>
+                                <li class="mt-3">Espacio de consulta acogedor situado en el centro de Sant Carles de la Rápita (Tarragona)</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">Tiene un coste de <strong>40 <i class="fas fa-euro-sign"></i></strong></div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card text-black bg-c-green-pure mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Pack Consulta Vía Email</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="mb-0" style="padding-left:15px;">
+                                <li>Consultas sobre temas muy concretos</li>
+                                <li class="mt-3">Dos comunicaciones vía email + una sesión de videollamada de 45 minutos</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">Tiene un coste de <strong>60 <i class="fas fa-euro-sign"></i></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="career" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/career.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container p-5">
+            <h1 class="text-white mb-0">Trayectoria</h1>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="{{ asset('build/me.jpg') | imagine_filter('1200xY') }}" class="img-fluid mb-4" alt="Marta Iglesias psicóloga">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Soy Marta Iglesias, Licenciada en <strong>Psicología</strong> y colegiada número <strong>22258</strong>.</p>
+                    <p>En el tercer curso de la carrera escuché por primera vez la palabra <strong>emoción</strong> dentro del aula hecho que me impactó y motivó a realizar el <strong>Máster en educación emocional y bienestar</strong> (Univesitat de Barcelona, 2011) para aprender y profundizar sobre ella.</p>
+                    <p class="mb-sm-0">Ambos estudios me proporcionaron las bases para el acompañamiento de procesos psicológicos mediante el conocimiento y gestión de las emociones como eje central de la praxis.</p>
+                </div>
+                <div class="col-sm-6">
+                    <p>De entre las múltiples opciones de especialización terapéutica, me decanté por la <strong>Terapia Transpersonal</strong> (Escuela Española de Desarrollo Transpersonal, 2015) ya que vi a través de ella la posibilidad de facilitar la integración de procesos vitales y existenciales, con las áreas bio-psico-social de la persona.</p>
+                    <p>Recientemente he finalizado un <strong>Máster en orientación educativa</strong> (UNIR, 2020) que me ha permitido profundizar en el desarrollo de técnicas de inclusión e innovación metodológica en el ámbito educativo.</p>
+                    <p class="mb-sm-0">He complementado esta base mediante la adquisición de <strong>herramientas específicas</strong> que me permitan ampliar el alcance del acompañamiento a la diversidad de situaciones de conflicto que las personas puedan presentar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-c-green-light text-black mb-0">
+        <div class="container">
+            <p class="lead mb-0"><strong>Me he formado en coaching, mediación en drogodependencias, intervención psicopedagógica en entornos sociales y familiares, procesos de duelo, dificultades en el aprendizaje, desarrollo de competencias transversales, pensamiento crítico y actitud creativa, entre otras.</strong></p>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>He dedicado mi vida profesional al acompañamiento de personas a través de todas las etapas vitales. Educadora social, psicóloga, orientadora, formadora, gestora de procesos y proyectos de planificación estratégica, son algunas de las categorías profesionales que he desarrollado a lo largo de los últimos <strong>15 años</strong>.</p>
+                    <p class="mb-sm-0">A su vez he formado parte de dos grupos de investigación de psicología social y del pensamiento así he colaborado junto con la funeraria Albia y Artmemori en la redacción de una guía para el acompañamiento en procesos de duelo: <em>"Mi Cuaderno de Ayuda al Duelo"</em>.</p>
+                </div>
+                <div class="col-sm-6">
+                    <p>A nivel personal puedo decirte que <strong>he sido adicta al cambio y a la intensidad del límite</strong>. Ello me ha permitido experimentar además de dolor, múltiples situaciones de aprendizaje que hoy amplían mi base de comprensión y empatía.</p>
+                    <p class="mb-sm-0">He realizado un proceso de autoconocimiento y autogestión de las emociones que hoy me permiten ser una persona consciente, eficiente y ecuánime sin perder por ello la esencia de mi personalidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/trajectory.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
+        <div class="container p-5">
+            <h1 class="text-white mb-0">Contacto</h1>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5>Marta Iglesias Ojeda</h5>
+                    <p class="lead">
+                        <i class="fas fa-phone-square"></i> <a href="tel:+34655768647">655 768 647</a><br>
+                        <i class="fas fa-envelope-square"></i> <a href="mailto:{{ mailer_destination }}">{{ mailer_destination }}</a>
+                    </p>
+                    <img src="{{ asset('build/contact.jpg') | imagine_filter('600xY') }}" class="img-fluid mb-4" alt="Imagen sobre contacto">
+                </div>
+                <div class="col">
+                    {{ form(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
