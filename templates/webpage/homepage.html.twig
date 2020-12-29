@@ -4,7 +4,7 @@
     <div id="home" class="jumbotron jumbotron-fluid bg-white mb-0">
         <div class="container text-center">
             <h1 class="display-1 text-secondary sr-only">{{ front_web_title | capitalize }}</h1>
-            <h2 class="display-4 text-secondary mb-0">Asesoría personalizada de compra de vehículos nuevos</h2>
+            <h2 class="display-4 text-secondary mb-0">Asesoría en la compra de vehículos nuevos</h2>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
@@ -60,8 +60,33 @@
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <p class="lead mb-0">{{ generate_lorem_ipsum_by_paragraphs() }}</p>
+                <div class="col-sm-4">
+                    <div class="mb-sm-0 mb-grid-gutter">
+                        <video autoplay="" loop="" muted="" playsinline="" poster="https://ak.picdn.net/shutterstock/videos/27728296/thumb/2.jpg" style="transform: rotate(0deg); width: 100%;"><source src="https://ak.picdn.net/shutterstock/videos/27728296/preview/stock-footage-happy-young-woman-leans-out-passenger-side-car-window-she-looks-in-wonder-and-awe-at-all-the.webm" type="video/webm"><source src="https://ak.picdn.net/shutterstock/videos/27728296/preview/stock-footage-happy-young-woman-leans-out-passenger-side-car-window-she-looks-in-wonder-and-awe-at-all-the.mp4" type="video/mp4"></video>
+                        <h3 class="h5 mb-2">Atención personalizada</h3>
+                        <p class="mb-0 text-muted">Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.</p>
+                    </div>
+                </div>
+                <span class="divider-vertical d-sm-block d-none"></span>
+                <div class="col-sm-4">
+                    <div class="mb-sm-0 mb-grid-gutter">
+                        <video autoplay="" loop="" muted="" playsinline="" poster="https://ak.picdn.net/shutterstock/videos/1016302870/thumb/1.jpg" style="transform: rotate(0deg); width: 100%;"><source src="https://ak.picdn.net/shutterstock/videos/1016302870/preview/stock-footage-aerial-top-down-dark-colored-car-driving-down-an-asphalt-road-crossing-the-vast-forest-on-a-sunny.webm" type="video/webm"><source src="https://ak.picdn.net/shutterstock/videos/1016302870/preview/stock-footage-aerial-top-down-dark-colored-car-driving-down-an-asphalt-road-crossing-the-vast-forest-on-a-sunny.mp4" type="video/mp4"></video>
+                        <h3 class="h5 mb-2">Ahorra tiempo</h3>
+                        <p class="mb-0 text-muted">Culpa nostrud commodo ea consequat reprehenderit aliquip. </p>
+                    </div>
+                </div>
+                <span class="divider-vertical d-sm-block d-none"></span>
+                <div class="col-sm-4">
+                    <div class="text-left">
+                        <video autoplay="" loop="" playsinline="" poster="https://ak.picdn.net/shutterstock/videos/1055094365/thumb/6.jpg" style="transform: rotate(0deg); width: 100%;"><source src="https://ak.picdn.net/shutterstock/videos/1055094365/preview/stock-footage-a-shot-under-the-hatch-where-the-electric-eco-car-charges.webm" type="video/webm"><source src="https://ak.picdn.net/shutterstock/videos/1055094365/preview/stock-footage-a-shot-under-the-hatch-where-the-electric-eco-car-charges.mp4" type="video/mp4"></video>
+                        <h3 class="h5 mb-2">Ahorra dinero</h3>
+                        <p class="mb-0 text-muted">Viverra scelerisque consequat net. Adipisicing esse consequat. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-5">
+                    <p class="lead mb-0">{{ generate_lorem_ipsum_by_paragraphs(1) }}</p>
                 </div>
             </div>
         </div>
@@ -130,12 +155,40 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h5>{{ front_web_title | capitalize }}</h5>
-                    <p class="lead">
-                        <i class="fas fa-phone-square"></i> <a href="tel:+34655768647">{{ front_web_phone }}</a><br>
-                        <i class="fas fa-envelope-square"></i> <a href="mailto:{{ mailer_destination }}">{{ mailer_destination }}</a>
-                    </p>
-                    <img src="{{ asset('build/contact.jpg') | imagine_filter('600xY') }}" class="img-fluid mb-4" alt="Imagen sobre contacto">
+                    <div class="card">
+                        <div class="card-img-top overflow-hidden">
+                            <iframe width="600" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d985265.6834686119!2d-73.53312098675273!3d41.40372595831977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e8483b8bffed93%3A0x53467ceb834b7397!2s396%20Lillian%20Blvd%2C%20Holbrook%2C%20NY%2011741%2C%20USA!5e0!3m2!1sen!2sua!4v1569318858921!5m2!1sen!2sua"></iframe>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h4">{{ front_web_title | capitalize }}</h3>
+                            <ul class="mb-0 list-unstyled nav-dark">
+                                <li class="mb-2 pb-1">
+                                    <a class="d-flex nav-link font-weight-normal p-0" href="tel:(0034){{ front_web_phone }}">
+                                        <i class="cxi-iphone mt-1 mr-2 pr-1 lead text-primary"></i>
+                                        {{ front_web_phone }}
+                                    </a>
+                                </li>
+                                <li class="mb-2 pb-1">
+                                    <a class="d-flex nav-link font-weight-normal p-0" href="mailto:{{ mailer_destination }}">
+                                        <i class="cxi-mail mt-1 mr-2 pr-1 lead text-primary"></i>
+                                        {{ mailer_destination }}
+                                    </a>
+                                </li>
+                                <li class="mb-2 pb-1">
+                                    <a class="d-flex nav-link font-weight-normal p-0" href="#">
+                                        <i class="cxi-clock mt-1 mr-2 pr-1 lead text-primary"></i>
+                                        Daily from 9 am to 9 pm
+                                    </a>
+                                </li>
+                                <li class="mb-2 pb-1">
+                                    <a class="d-flex nav-link font-weight-normal p-0" href="#">
+                                        <i class="cxi-map-pin-outline mt-1 mr-2 pr-1 lead text-primary"></i>
+                                        8502 Preston Rd. Inglewood, NY 98380
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="col">
                     {{ form(form) }}
