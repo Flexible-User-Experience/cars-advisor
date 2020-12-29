@@ -1,22 +1,58 @@
-// colors
-$green-dark:  #FF00FF; //#7ABF5B;
-$green-pure:  #C4DB72;
-$green:       #BADBA5;
-$green-light: #E5EEC2;
+// brand colors
+$brand-blue: #29337B;
+$brand-pink: #F2947B;
+$brand-grey: #C4DB72;
 
 // variables
-$body-bg: #12263F;
-$pb-custom-navbar-height: 90px;
-$navbar-height: $pb-custom-navbar-height;
+$pb-custom-navbar-height: 77px;
 
 // fonts
-$icon-font-path: "/build/fonts/";
-$fa-font-path:   "~@fortawesome/fontawesome-free/webfonts";
+$icon-font-path:               "/build/fonts/";
+$fa-font-path:                 "~@fortawesome/fontawesome-free/webfonts";
+$font-family-sans-serif:       'Ubuntu', sans-serif !default;
 $enable-responsive-font-sizes: true;
 
-// colors
-$brand-primary-color: $green-dark;
-$brand-secondary-color: $green-light;
-$link-color: $brand-primary-color;
-$navbar-light-hover-color: $brand-secondary-color;
+// bootstrap settings
+$primary:                   $brand-blue;
+$secondary:                 $brand-pink;
+$navbar-height:             $pb-custom-navbar-height;
+$brand-primary-color:       $brand-pink;
+$brand-secondary-color:     $brand-blue;
+$link-color:                $brand-secondary-color;
+$navbar-light-hover-color:  $brand-secondary-color;
 $navbar-light-active-color: $brand-primary-color;
+
+body.my-body {
+  margin-top: $pb-custom-navbar-height;
+}
+
+#home {
+  //background-image: -webkit-gradient(linear, left bottom, left top, from(#cc6aa5), color-stop(#3e91cc), to(#2dcca7));
+  //background-image: linear-gradient(0deg, #cc6aa5, #3e91cc, #2dcca7);
+  background-image: linear-gradient(180deg, #8075ae 0, #595495 25%, #29337b 50%, #001762 75%, #00004c 100%);
+  background-size: 100% 600%;
+  animation: 10s linear 0s infinite alternate both running bg-pan-bottom;
+}
+
+.bg-pan-bottom {
+  -webkit-animation: bg-pan-bottom 10s linear infinite alternate both;
+  animation: bg-pan-bottom 10s linear infinite alternate both;
+}
+
+@-webkit-keyframes bg-pan-bottom {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}
+
+@keyframes bg-pan-bottom {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}

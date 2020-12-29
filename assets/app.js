@@ -1,4 +1,3 @@
-// import './styles/app.scss';
 import './styles/theme.scss';
 import 'jquery.scrollto';
 

@@ -4,43 +4,66 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="author" content="https://www.flux.cat">
-    <meta name="description" content="{{ front_web_title | capitalize }}{# TODO improve SEO description #}">
+    <meta name="description" content="{{ front_web_title | capitalize }} Asesoría personalizada de compra de vehículos nuevos">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" href="{{ asset('build/favicon.png') }}"/>
     <link rel="icon" type="image/png" href="{{ asset('build/favicon.png') }}" />
-    <title>{{ front_web_title | capitalize }}{% block title %} · {# TODO improve SEO description #}{% endblock %}</title>
+    <title>{{ front_web_title | capitalize }}{% block title %} · Asesoría personalizada de compra de vehículos nuevos{% endblock %}</title>
     {{ encore_entry_link_tags('app') }}
 </head>
 <body class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="110">
-<nav id="sections-menu" class="navbar fixed-top navbar-expand-lg navbar-light bg-white with-border-bottom">
-    <a href="{{ path('app_front_homepage') }}" class="navbar-brand">
-        <img height="70" src="{{ asset('build/cars_advisor.png') }}" alt="{{ front_web_title | capitalize }} logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        {% block menu %}
+<header class="navbar fixed-top navbar-expand-lg navbar-light bg-secondary">
+    <div class="container-fluid px-0 px-xl-3">
+        <a class="navbar-brand order-lg-1 mr-0 pr-lg-3 mr-lg-4" href="{{ path('app_front_homepage') }}">
+            <img src="{{ asset('build/cars_advisor.png') }}" alt="{{ front_web_title | capitalize }} logo" width="190">
+        </a>
+        <nav id="sections-menu" class="collapse navbar-collapse order-lg-2">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#home">{{ front_web_title | capitalize }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#metodology">Metodología</a>
+                    <a class="nav-link" href="#asesoria">Asesoría</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#services">Servicios</a>
+                    <a class="nav-link" href="#equipo">Equipo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#career">Trayectoria</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link pr-0" href="#contact">Contacto</a>
+                    <a class="nav-link pr-0" href="#contacto">Contacto</a>
                 </li>
             </ul>
-        {% endblock %}
+        </nav>
     </div>
-</nav>
+</header>
+{#<nav id="sections-menu" class="navbar fixed-top navbar-expand-lg navbar-light bg-white with-border-bottom">#}
+{#    <a href="{{ path('app_front_homepage') }}" class="navbar-brand">#}
+{#        <img height="70" src="{{ asset('build/cars_advisor.png') }}" alt="{{ front_web_title | capitalize }} logo">#}
+{#    </a>#}
+{#    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">#}
+{#        <span class="navbar-toggler-icon"></span>#}
+{#    </button>#}
+{#    <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
+{#        {% block menu %}#}
+{#            <ul class="navbar-nav ml-auto">#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#home">{{ front_web_title | capitalize }}</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#metodology">Metodología</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#services">Servicios</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#career">Trayectoria</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link pr-0" href="#contact">Contacto</a>#}
+{#                </li>#}
+{#            </ul>#}
+{#        {% endblock %}#}
+{#    </div>#}
+{#</nav>#}
 {% if app.session.flashbag.peekAll | length > 0 %}
     <div class="container">
         {% for type, messages in app.session.flashbag.all %}
