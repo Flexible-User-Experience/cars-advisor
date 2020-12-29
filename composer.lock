@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd1eb504cd7b696773ab7dc0a9164d4f",
+    "content-hash": "3d067ee44fc87f34112bd27a318d1791",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -377,6 +377,50 @@
                 "image processing"
             ],
             "time": "2020-11-03T22:35:03+00:00"
+        },
+        {
+            "name": "knpuniversity/lorem-ipsum-bundle",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/knpuniversity/lorem-ipsum-bundle.git",
+                "reference": "f05d32821046989eeecb36b0ed8079e8c0d5309b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/knpuniversity/lorem-ipsum-bundle/zipball/f05d32821046989eeecb36b0ed8079e8c0d5309b",
+                "reference": "f05d32821046989eeecb36b0ed8079e8c0d5309b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/config": "^3.4 || ^4.0",
+                "symfony/dependency-injection": "^3.4 || ^4.0",
+                "symfony/http-kernel": "^3.4 || ^4.0"
+            },
+            "require-dev": {
+                "symfony/browser-kit": "^3.4 || ^4.0",
+                "symfony/framework-bundle": "^3.4 || ^4.0",
+                "symfony/phpunit-bridge": "^3.4 || ^4.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "KnpU\\LoremIpsumBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan Weaver",
+                    "email": "ryan@knpuniversity.com"
+                }
+            ],
+            "description": "Happy lorem ipsum",
+            "time": "2018-03-22T12:23:34+00:00"
         },
         {
             "name": "liip/imagine-bundle",

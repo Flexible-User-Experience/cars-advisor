@@ -11,6 +11,7 @@
         "ext-json": "*",
         "egulias/email-validator": "^2.1",
         "excelwebzone/recaptcha-bundle": "^1.5",
+        "knpuniversity/lorem-ipsum-bundle": "^1.0",
         "liip/imagine-bundle": "^2.3",
         "sensio/framework-extra-bundle": "^5.4",
         "symfony/asset": "4.4.*",
