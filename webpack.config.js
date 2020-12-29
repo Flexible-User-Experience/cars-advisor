@@ -19,6 +19,9 @@ Encore
     .copyFiles({
         from: './assets/vectors/'
     })
+    .copyFiles({
+        from: './assets/fonts/'
+    })
     /*
      * ENTRY CONFIG
      *

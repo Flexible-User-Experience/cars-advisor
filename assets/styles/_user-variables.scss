@@ -1,0 +1,22 @@
+// colors
+$green-dark:  #FF00FF; //#7ABF5B;
+$green-pure:  #C4DB72;
+$green:       #BADBA5;
+$green-light: #E5EEC2;
+
+// variables
+$body-bg: #12263F;
+$pb-custom-navbar-height: 90px;
+$navbar-height: $pb-custom-navbar-height;
+
+// fonts
+$icon-font-path: "/build/fonts/";
+$fa-font-path:   "~@fortawesome/fontawesome-free/webfonts";
+$enable-responsive-font-sizes: true;
+
+// colors
+$brand-primary-color: $green-dark;
+$brand-secondary-color: $green-light;
+$link-color: $brand-primary-color;
+$navbar-light-hover-color: $brand-secondary-color;
+$navbar-light-active-color: $brand-primary-color;

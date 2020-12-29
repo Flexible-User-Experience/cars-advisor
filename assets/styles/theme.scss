@@ -1,0 +1,18 @@
+// Custom Variables
+@import 'user-variables';
+
+// Theme Helpers: Variables, Mixins and Placeholders
+@import 'helpers';
+
+// Bootstrap Core
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~bootstrap/scss/bootstrap";
+
+// Theme Core
+@import 'reboot';
+@import 'components';
+@import 'utilities';
+
+// Custom Core
+@import 'user';
