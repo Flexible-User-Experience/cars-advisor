@@ -2,74 +2,73 @@
 
 {% block body %}
     <div id="home" class="jumbotron jumbotron-fluid bg-white mb-0">
-        <div class="container">
+        <div class="container text-center">
             <h1 class="display-1 text-secondary sr-only">{{ front_web_title | capitalize }}</h1>
             <h2 class="display-4 text-secondary mb-0">Asesoría personalizada de compra de vehículos nuevos</h2>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
         <div class="container">
-            <p class="lead mb-0">{{ generate_lorem_ipsum_by_paragraphs() }}</p>
+            {#<!-- Horizontal step wrapper -->#}
+            <div class="cs-steps row">
+                {#<!-- Step -->#}
+                <div class="col-md-4">
+                    <div class="cs-step mb-md-0 mb-5">
+                        <div class="cs-step-head mb-3">
+                            <span class="cs-step-indicator"><i class="fas fa-gift"></i></span>
+                            <span class="cs-step-line"></span>
+                        </div>
+                        <div class="cs-step-body">
+                            <h3 class="h5 mb-2">Pídenos un deseo</h3>
+                            <p class="mb-3 text-muted">Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.</p>
+                        </div>
+                    </div>
+                </div>
+                {#<!-- Step -->#}
+                <div class="col-md-4">
+                    <div class="cs-step mb-md-0 mb-5">
+                        <div class="cs-step-head mb-3">
+                            <span class="cs-step-indicator"><i class="fas fa-paperclip"></i></span>
+                            <span class="cs-step-line"></span>
+                        </div>
+                        <div class="cs-step-body">
+                            <h3 class="h5 mb-2">Recibe la mejor oferta</h3>
+                            <p class="mb-3 text-muted">Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim ad tempor est ea.</p>
+                        </div>
+                    </div>
+                </div>
+                {#<!-- Step -->#}
+                <div class="col-md-4">
+                    <div class="cs-step">
+                        <div class="cs-step-head mb-3">
+                            <span class="cs-step-indicator"><i class="fas fa-car"></i></span>
+                        </div>
+                        <div class="cs-step-body">
+                            <h3 class="h5 mb-2">Compra directo al concesionario</h3>
+                            <p class="mb-3 text-muted">Adipisicing esse aliqua aliquip qui amet. Aute eiusmod dolore dolore et ad et veniam ad deserunt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="asesoria" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/metodology.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
-        <div class="container p-5">
-            <h1 class="text-white mb-0">Metodologia</h1>
+    <div id="gestion" class="jumbotron jumbotron-fluid bg-primary mb-0">
+        <div class="container text-center">
+            <h1 class="text-secondary mb-0">{{ 'front.menu.management' | trans | capitalize }}</h1>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="card border-success mb-4">
-                        <img src="{{ asset('build/expression.jpg') | imagine_filter('348x232') }}" class="card-img-top" alt="Imagen sobre expresión y conciencia">
-                        <div class="card-body">
-                            <h5 class="card-title">Expresión y conciencia</h5>
-                            <p class="card-text mb-0">La expresión de los pensamientos, sentimientos y emociones es el primer paso para tomar conciencia y poder poner nombre a aquello que te está pasando.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card border-success mb-4">
-                        <img src="{{ asset('build/yarn.jpg') | imagine_filter('348x232') }}" class="card-img-top" alt="Imagen sobre comprensión y orden">
-                        <div class="card-body">
-                            <h5 class="card-title">Comprensión y orden</h5>
-                            <p class="card-text mb-0">Una vez identificados los elementos clave, el foco se traslada en comprender de manera integral y profunda aquello que genera sufrimiento, así como aprender a ordenar  los pensamientos y sentimientos. Ello, además de aliviar la situación presente, permite en muchas ocasiones trabajar en clave de prevención futura.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card border-success mb-4">
-                        <img src="{{ asset('build/bulb.jpg') | imagine_filter('348x232') }}" class="card-img-top" alt="Imagen sobre plan de accion">
-                        <div class="card-body">
-                            <h5 class="card-title">Plan de acción</h5>
-                            <p class="card-text mb-0"><strong>Si tenemos un "por qué", siempre encontraremos un "cómo".</strong> Todo proceso terapéutico supone una metamorfosis personal. Por ello, es probable que habiendo establecido claridad, puedan aparecer nuevos horizontes hacia los que dirigir tus pasos.  Te acompaño a dibujar una ruta y te animo a que consigas aquello que te hayas propuesto. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col">
-                    <h3 class="mb-4">Elementos clave</h3>
-                    <p class="lead">
-                        Expresión e identificación de pensamientos y creencias, escucha activa, atención plena, reflexión crítica, metáforas, preguntas fuerza, estrategias de regulación, gestión del miedo y lo incierto, profundidad y pragmatismo, toma de decisiones, reformulación positiva, comunicación asertiva, creatividad en la búsqueda de alternativas, propósito, plan de acción, potencial y capacidad, objetivos vitales.
-                    </p>
-                    <p>
-                        El asesoramiento psicológico es un proceso en el que tu te conviertes en protagonista activ@. No se trata de recibir consejos, sino de estar dispuest@ a activar el potencial que hay en ti. Estableceremos un vínculo en el que, a través de la <strong>expresión</strong> de aquello que te abruma irás desarrollando estrategias que te permitirán identificar elementos clave del conflicto y poderlos atender, comprender y reformularlos para que puedas salir fortalecid@.
-                    </p>
-                    <p>
-                        Cada caso es único, pero a nivel general, en las primeras sesiones se trabaja sobre la <strong>capacidad de tomar conciencia</strong> aquellas cuestiones que están interfiriendo en el desarrollo pleno de tu persona. En muchas ocasiones, este <em>"darse cuenta"</em> es de por si un elemento liberador. Pero no suficiente; además de saber qué nos pasa, hemos de ordenarlo y comprenderlo para poderlo transcender.
-                    </p>
-                    <p class="mb-0">
-                        Comprender se basa en la reflexión y el autonocimiento, en <strong>descubrir el sentido profundo de aquello que está pasando</strong>. Aquí entra en juego el desarrollo de una <strong>actitud resiliente</strong> que facilitará desarrollar la capacidad de elección del camino que quieres seguir y un aprendizaje integrado.
-                    </p>
+                    <p class="lead mb-0">{{ generate_lorem_ipsum_by_paragraphs() }}</p>
                 </div>
             </div>
         </div>
     </div>
-    <div id="equipo" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/services.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
-        <div class="container p-5">
-            <h1 class="text-white mb-0">Servicios</h1>
+    <div id="equipo" class="jumbotron jumbotron-fluid bg-primary mb-0">
+        <div class="container text-center">
+            <h1 class="text-secondary mb-0">{{ 'front.menu.team' | trans | capitalize }}</h1>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
@@ -122,10 +121,9 @@
             </div>
         </div>
     </div>
-
-    <div id="contacto" class="jumbotron jumbotron-fluid bg-white mb-0" style="background-image: url('{{ asset('build/trajectory.jpg') | imagine_filter('2400xY') }}');background-size:cover;">
-        <div class="container p-5">
-            <h1 class="text-white mb-0">Contacto</h1>
+    <div id="contacto" class="jumbotron jumbotron-fluid bg-primary mb-0">
+        <div class="container text-center">
+            <h1 class="text-secondary mb-0">Contacto</h1>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">

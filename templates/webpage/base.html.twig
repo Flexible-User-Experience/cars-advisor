@@ -12,58 +12,32 @@
     {{ encore_entry_link_tags('app') }}
 </head>
 <body class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="110">
-<header class="navbar fixed-top navbar-expand-lg navbar-light bg-secondary">
+<nav id="sections-menu" class="navbar fixed-top navbar-expand-lg navbar-light bg-secondary">
     <div class="container-fluid px-0 px-xl-3">
-        <a class="navbar-brand order-lg-1 mr-0 pr-lg-3 mr-lg-4" href="{{ path('app_front_homepage') }}">
-            <img src="{{ asset('build/cars_advisor.png') }}" alt="{{ front_web_title | capitalize }} logo" width="190">
+        <a class="navbar-brand" href="{{ path('app_front_homepage') }}">
+            <img src="{{ asset('build/cars_advisor.svg') }}" alt="{{ front_web_title | capitalize }} logo" width="250">
         </a>
-        <nav id="sections-menu" class="collapse navbar-collapse order-lg-2">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mr-0" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#home">{{ front_web_title | capitalize }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#asesoria">Asesoría</a>
+                    <a class="nav-link" href="#gestion">{{ 'front.menu.management' | trans | capitalize }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#equipo">Equipo</a>
+                    <a class="nav-link" href="#equipo">{{ 'front.menu.team' | trans | capitalize }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link pr-0" href="#contacto">Contacto</a>
+                    <a class="nav-link pr-0" href="#contacto">{{ 'front.menu.contact' | trans | capitalize }}</a>
                 </li>
             </ul>
-        </nav>
+        </div>
     </div>
-</header>
-{#<nav id="sections-menu" class="navbar fixed-top navbar-expand-lg navbar-light bg-white with-border-bottom">#}
-{#    <a href="{{ path('app_front_homepage') }}" class="navbar-brand">#}
-{#        <img height="70" src="{{ asset('build/cars_advisor.png') }}" alt="{{ front_web_title | capitalize }} logo">#}
-{#    </a>#}
-{#    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">#}
-{#        <span class="navbar-toggler-icon"></span>#}
-{#    </button>#}
-{#    <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
-{#        {% block menu %}#}
-{#            <ul class="navbar-nav ml-auto">#}
-{#                <li class="nav-item">#}
-{#                    <a class="nav-link" href="#home">{{ front_web_title | capitalize }}</a>#}
-{#                </li>#}
-{#                <li class="nav-item">#}
-{#                    <a class="nav-link" href="#metodology">Metodología</a>#}
-{#                </li>#}
-{#                <li class="nav-item">#}
-{#                    <a class="nav-link" href="#services">Servicios</a>#}
-{#                </li>#}
-{#                <li class="nav-item">#}
-{#                    <a class="nav-link" href="#career">Trayectoria</a>#}
-{#                </li>#}
-{#                <li class="nav-item">#}
-{#                    <a class="nav-link pr-0" href="#contact">Contacto</a>#}
-{#                </li>#}
-{#            </ul>#}
-{#        {% endblock %}#}
-{#    </div>#}
-{#</nav>#}
+</nav>
 {% if app.session.flashbag.peekAll | length > 0 %}
     <div class="container">
         {% for type, messages in app.session.flashbag.all %}

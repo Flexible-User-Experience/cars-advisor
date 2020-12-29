@@ -1,0 +1,7 @@
+front:
+  menu:
+    home: 'inicio'
+    management: 'gestión'
+    advisory: 'asesoría'
+    team: 'equipo'
+    contact: 'contacto'

@@ -4,7 +4,7 @@ $brand-pink: #F2947B;
 $brand-grey: #C4DB72;
 
 // variables
-$pb-custom-navbar-height: 77px;
+$pb-custom-navbar-height: 92px;
 
 // fonts
 $icon-font-path:               "/build/fonts/";
@@ -19,8 +19,9 @@ $navbar-height:             $pb-custom-navbar-height;
 $brand-primary-color:       $brand-pink;
 $brand-secondary-color:     $brand-blue;
 $link-color:                $brand-secondary-color;
-$navbar-light-hover-color:  $brand-secondary-color;
+$navbar-light-hover-color:  $brand-primary-color;
 $navbar-light-active-color: $brand-primary-color;
+$navbar-light-color:        $brand-secondary-color;
 
 body.my-body {
   margin-top: $pb-custom-navbar-height;
