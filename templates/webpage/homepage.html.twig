@@ -175,19 +175,19 @@
     </div>
     <div class="jumbotron jumbotron-fluid bg-c-green-light text-black mb-0">
         <div class="container">
-            <p class="lead mb-0"><strong>Me he formado en coaching, mediación en drogodependencias, intervención psicopedagógica en entornos sociales y familiares, procesos de duelo, dificultades en el aprendizaje, desarrollo de competencias transversales, pensamiento crítico y actitud creativa, entre otras.</strong></p>
+            <p class="lead mb-0"><strong>{{ generate_lorem_ipsum_by_sentences() }}</strong></p>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <p>He dedicado mi vida profesional al acompañamiento de personas a través de todas las etapas vitales. Educadora social, psicóloga, orientadora, formadora, gestora de procesos y proyectos de planificación estratégica, son algunas de las categorías profesionales que he desarrollado a lo largo de los últimos <strong>15 años</strong>.</p>
-                    <p class="mb-sm-0">A su vez he formado parte de dos grupos de investigación de psicología social y del pensamiento así he colaborado junto con la funeraria Albia y Artmemori en la redacción de una guía para el acompañamiento en procesos de duelo: <em>"Mi Cuaderno de Ayuda al Duelo"</em>.</p>
+                    <p>{{ generate_lorem_ipsum_by_sentences() }}</p>
+                    <p class="mb-sm-0">{{ generate_lorem_ipsum_by_sentences() }}</p>
                 </div>
                 <div class="col-sm-6">
-                    <p>A nivel personal puedo decirte que <strong>he sido adicta al cambio y a la intensidad del límite</strong>. Ello me ha permitido experimentar además de dolor, múltiples situaciones de aprendizaje que hoy amplían mi base de comprensión y empatía.</p>
-                    <p class="mb-sm-0">He realizado un proceso de autoconocimiento y autogestión de las emociones que hoy me permiten ser una persona consciente, eficiente y ecuánime sin perder por ello la esencia de mi personalidad.</p>
+                    <p>{{ generate_lorem_ipsum_by_sentences() }}</p>
+                    <p class="mb-sm-0">{{ generate_lorem_ipsum_by_sentences() }}</p>
                 </div>
             </div>
         </div>
@@ -201,9 +201,9 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h5>Marta Iglesias Ojeda</h5>
+                    <h5>{{ front_web_title | capitalize }}</h5>
                     <p class="lead">
-                        <i class="fas fa-phone-square"></i> <a href="tel:+34655768647">655 768 647</a><br>
+                        <i class="fas fa-phone-square"></i> <a href="tel:+34655768647">{{ front_web_phone }}</a><br>
                         <i class="fas fa-envelope-square"></i> <a href="mailto:{{ mailer_destination }}">{{ mailer_destination }}</a>
                     </p>
                     <img src="{{ asset('build/contact.jpg') | imagine_filter('600xY') }}" class="img-fluid mb-4" alt="Imagen sobre contacto">
