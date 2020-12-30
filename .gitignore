@@ -1,3 +1,14 @@
+###> app/bundle ###
+!/public/uploads/.gitkeep
+/public/uploads/disc/*
+!/public/uploads/disc/.gitkeep
+/public/uploads/documents/*
+!/public/uploads/documents/.gitkeep
+/public/uploads/images/*
+!/public/uploads/images/.gitkeep
+!.travis.yml
+/src/.preload.php
+###< app/bundle ###
 
 ###> symfony/framework-bundle ###
 /.env.local
@@ -5,7 +16,15 @@
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
-/var/
+!.gitkeep
+!var/log/keepit.txt
+!var/log/.gitkeep
+!var/log/.gitignore
+/var/log/test.log
+/var/log/dev.log
+/var/log/prod.log
+/var/cache/*
+/var/testing-database.db
 /vendor/
 ###< symfony/framework-bundle ###
 
