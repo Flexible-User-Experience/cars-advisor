@@ -1,13 +1,3 @@
-/**
- * Createx | Multipurpose Bootstrap Template
- * Copyright 2021 Createx Studio
- * Theme core scripts
- * 
- * @author Createx Studio
- * @version 2.0
- */
-
-
 ;(function ($) {
   'use strict';
 
