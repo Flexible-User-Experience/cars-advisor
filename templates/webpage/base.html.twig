@@ -12,7 +12,7 @@
     {{ encore_entry_link_tags('app') }}
 </head>
 <body class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="110">
-<nav id="sections-menu" class="navbar fixed-top navbar-expand-lg navbar-light bg-secondary">
+<nav id="sections-menu" class="navbar fixed-top navbar-expand-lg navbar-light custom-navbar-bg-secondary">
     <div class="container-fluid px-0 px-xl-3">
         <a class="navbar-brand" href="{{ path('app_front_homepage') }}">
             <img src="{{ asset('build/cars_advisor.svg') }}" alt="{{ front_web_title | capitalize }} logo" width="250">
@@ -57,18 +57,18 @@
     </div>
 {% endif %}
 {% block body %}{% endblock %}
-<footer class="footer bg-secondary pt-3 pb-5">
+<footer class="footer bg-dark pt-3 pb-5 text-white">
     <div class="container">
         <div class="row">
             <div class="col-sm-2">
                 <strong>{{ front_web_title | capitalize }}</strong><br>
-                <i class="fas fa-phone-square"></i> <a class="text-reset" href="tel:+34655768647">{{ front_web_phone }}</a><br>
-                <i class="fas fa-envelope-square"></i> <a class="text-reset" href="mailto:{{ mailer_destination }}">{{ mailer_destination }}</a>
+                <i class="fas fa-phone-square"></i> <a class="text-reset text-decoration-none" href="tel:+34655768647">{{ front_web_phone }}</a><br>
+                <i class="fas fa-envelope-square"></i> <a class="text-reset text-decoration-none" href="mailto:{{ mailer_destination }}">{{ mailer_destination }}</a>
             </div>
             <div class="col-sm-10 text-right">
                 <ul class="list-inline">
                     <li class="list-inline-item">
-                        <a href="{{ path('app_front_privacy_policy') }}">política de privacidad</a>
+                        <a class="text-reset text-decoration-none" href="{{ path('app_front_privacy_policy') }}">política de privacidad</a>
                     </li>
                 </ul>
                 &copy; {{ 'now' | date('Y') }}

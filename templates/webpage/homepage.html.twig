@@ -50,11 +50,16 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col mt-5">
+                    <p class="lead mb-0">{{ generate_lorem_ipsum_by_paragraphs(1) }}</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="gestion" class="jumbotron jumbotron-fluid bg-primary mb-0">
+    <div id="gestion" class="jumbotron jumbotron-fluid bg-secondary mb-0">
         <div class="container text-center">
-            <h1 class="text-secondary mb-0">{{ 'front.menu.management' | trans | capitalize }}</h1>
+            <h1 class="text-primary mb-0">{{ 'front.menu.management' | trans | capitalize }}</h1>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
@@ -146,9 +151,9 @@
             </div>
         </div>
     </div>
-    <div id="contacto" class="jumbotron jumbotron-fluid bg-primary mb-0">
+    <div id="contacto" class="jumbotron jumbotron-fluid bg-secondary mb-0">
         <div class="container text-center">
-            <h1 class="text-secondary mb-0">Contacto</h1>
+            <h1 class="text-primary mb-0">Contacto</h1>
         </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-white mb-0">
@@ -192,6 +197,18 @@
                 </div>
                 <div class="col">
                     {{ form(form) }}
+{#                    {{ form_start(form) }}#}
+{#                    {{ form_row(form.name) }}#}
+{#                    {{ form_row(form.email) }}#}
+{#                    {{ form_row(form.message) }}#}
+{#                    <div class="custom-control custom-checkbox">#}
+{#                        <input class="custom-control-input" type="checkbox" id="ex-check-2" checked>#}
+{#                        {{ form_error(form.privacyPolicyAgreementAccepted) }}#}
+{#                        {{ form_widget(form.privacyPolicyAgreementAccepted) }}#}
+{#                        <label class="custom-control-label" for="ex-check-2">Uncheck <a href="{{ path('app_front_privacy_policy') }}" target="_blank">this</a> checkbox</label>#}
+{#                    </div>#}
+{#                    {{ form_rest(form) }}#}
+{#                    {{ form_end(form) }}#}
                 </div>
             </div>
         </div>

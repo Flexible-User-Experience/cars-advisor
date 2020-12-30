@@ -1,7 +1,7 @@
 // brand colors
 $brand-blue: #29337B;
 $brand-pink: #F2947B;
-$brand-grey: #C4DB72;
+$brand-grey: gainsboro;
 
 // variables
 $pb-custom-navbar-height: 92px;
@@ -27,10 +27,18 @@ body.my-body {
   margin-top: $pb-custom-navbar-height;
 }
 
-#home {
-  //background-image: -webkit-gradient(linear, left bottom, left top, from(#cc6aa5), color-stop(#3e91cc), to(#2dcca7));
-  //background-image: linear-gradient(0deg, #cc6aa5, #3e91cc, #2dcca7);
+nav.custom-navbar-bg-secondary {
+  background-color: $brand-grey;
+}
+
+#home, #equipo {
   background-image: linear-gradient(180deg, #8075ae 0, #595495 25%, #29337b 50%, #001762 75%, #00004c 100%);
+  background-size: 100% 600%;
+  animation: 10s linear 0s infinite alternate both running bg-pan-bottom;
+}
+
+#gestion, #contacto {
+  background-image: linear-gradient(0deg, #ffd4a5 0, #ffcaa0 12.5%, #ffbd97 25%, #ffab8a 37.5%, #f2947a 50%, #e57d6c 62.5%, #da6b64 75%, #d35d61 87.5%, #ce5363 100%);
   background-size: 100% 600%;
   animation: 10s linear 0s infinite alternate both running bg-pan-bottom;
 }
