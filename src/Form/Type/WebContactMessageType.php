@@ -75,9 +75,9 @@ class WebContactMessageType extends AbstractType
                     'required' => true,
                     'mapped' => false,
                     'label' => 'Acepto las condiciones legales',
-                    'attr' => [
-                        'class' => 'custom-control-input',
-                    ],
+//                    'attr' => [
+//                        'class' => 'custom-control-input',
+//                    ],
                 ]
             )
             ->add(
