@@ -2,6 +2,7 @@
 $brand-blue: #29337B;
 $brand-pink: #F2947B;
 $brand-grey: gainsboro;
+$brand-grey-navbar: rgba(220, 220, 220, 0.95);
 
 // variables
 $pb-custom-navbar-height: 92px;
@@ -28,7 +29,7 @@ body.my-body {
 }
 
 nav.custom-navbar-bg-secondary {
-  background-color: $brand-grey;
+  background-color: $brand-grey-navbar !important;
 }
 
 #home, #equipo {
