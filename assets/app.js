@@ -1,4 +1,5 @@
 import './styles/theme.scss';
+import 'tiny-slider/dist/tiny-slider.css';
 import 'jquery.scrollto';
 import { tns } from 'tiny-slider/src/tiny-slider'
 
@@ -14,11 +15,15 @@ $(document).ready(function() {
     tns({
         container: '.cs-carousel-inner',
         mode: 'carousel',
-        items: 1,
+        items: 2,
         gutter: 5,
         slideBy: 'page',
-        autoHeight: true,
-        autoplay: true
+        controlsText: [
+            '<i class="cxi-angle-left"></i>',
+            '<i class="cxi-angle-right"></i>'
+        ],
+        loop: false,
+        autoplay: false
     });
 });
 
