@@ -15,14 +15,22 @@ $(document).ready(function() {
     tns({
         container: '.cs-carousel-inner',
         mode: 'carousel',
-        items: 2,
+        items: 3,
         gutter: 5,
+        speed: 1000,
+        autoplayTimeout: 3000,
+        // autoplayButton: '',
         slideBy: 'page',
         controlsText: [
             '<i class="cxi-angle-left"></i>',
             '<i class="cxi-angle-right"></i>'
         ],
-        loop: false,
-        autoplay: false
+        autoplayButtonOutput: false,
+        arrowKeys: true,
+        controls: false,
+        center: true,
+        loop: true,
+        autoplayHoverPause: true,
+        autoplay: true
     });
 });
