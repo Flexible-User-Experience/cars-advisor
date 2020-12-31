@@ -3,6 +3,7 @@ $brand-blue: #29337B;
 $brand-pink: #F2947B;
 $brand-grey: gainsboro;
 $brand-grey-navbar: rgba(220, 220, 220, 0.95);
+$brand-grey-footer: #565656;
 
 // variables
 $pb-custom-navbar-height: 92px;
@@ -10,7 +11,7 @@ $pb-custom-navbar-height: 92px;
 // fonts
 $icon-font-path:               "/build/fonts/";
 $fa-font-path:                 "~@fortawesome/fontawesome-free/webfonts";
-$font-family-sans-serif:       'Ubuntu', sans-serif !default;
+$font-family-sans-serif:       "Ubuntu", sans-serif !default;
 $enable-responsive-font-sizes: true;
 
 // bootstrap settings
@@ -30,6 +31,10 @@ body.my-body {
 
 nav.custom-navbar-bg-secondary {
   background-color: $brand-grey-navbar !important;
+}
+
+footer.custom-footer-bg-dark {
+  background-color: $brand-grey-footer !important;
 }
 
 #home, #equipo {
