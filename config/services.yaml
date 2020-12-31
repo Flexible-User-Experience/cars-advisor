@@ -26,8 +26,8 @@ services:
         autowire:      true
         autoconfigure: true
         bind:
-            $adminManagerEmail: ''
-            $frontProjectTitle: ''
+            $adminManagerEmail: '%mailer_destination%'
+            $frontProjectTitle: '%front_web_title%'
     App\:
         resource: '../src/'
         exclude:
@@ -38,3 +38,8 @@ services:
     App\Controller\:
         resource: '../src/Controller/'
         tags: ['controller.service_arguments']
+    App\Service\EmailNotificationsService:
+        arguments:
+            - '@mailer'
+            - '%mailer_destination%'
+            - '%front_base_url%'

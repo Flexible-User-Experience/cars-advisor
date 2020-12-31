@@ -115,14 +115,14 @@
             <div class="row justify-content-center">
                 <div class="col-xl-3 col-sm-4">
                     <div class="text-center mb-sm-0 mb-grid-gutter"><img class="mb-3" src="{{ asset('build/04.svg') }}" alt="Icon box image" width="48">
-                        <h3 class="h5 mb-2 pt-1 text-primary" style="font-size: 2.875rem">60%</h3>
+                        <h3 class="h5 mb-2 pt-1 text-primary" style="font-size: 2.875rem">85%</h3>
                         <p class="mb-0 font-size-sm text-dark">Clients on&nbsp;the recommendation of&nbsp;friends</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-4">
                     <div class="text-center mb-sm-0 mb-grid-gutter"><img class="mb-3" src="{{ asset('build/05.svg') }}" alt="Icon box image" width="48">
                         <h3 class="h5 mb-2 pt-1 text-primary" style="font-size: 2.875rem">2400+</h3>
-                        <p class="mb-0 font-size-sm text-dark">Apartments renovated</p>
+                        <p class="mb-0 font-size-sm text-dark">Cars renovated</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-4">
@@ -152,14 +152,12 @@
                             <ul class="list-unstyled mb-3 pb-1">
                                 <li class="nav-dark">
                                     <a class="nav-link p-0 font-weight-normal" href="tel:(0034){{ front_web_phone }}">
-                                        <i class="fas fa-phone-square mr-2"></i>
-                                        {{ front_web_phone }}
+                                        <i class="cxi-iphone mr-1"></i> {{ front_web_phone }}
                                     </a>
                                 </li>
                                 <li class="nav-dark mb-0">
                                     <a class="nav-link p-0 font-weight-normal" href="mailto:{{ mailer_destination }}">
-                                        <i class="cxi-mail align-middle mr-2"></i>
-                                        {{ mailer_destination }}
+                                        <i class="cxi-mail align-middle mr-1"></i> {{ mailer_destination }}
                                     </a>
                                 </li>
                             </ul>
@@ -232,18 +230,6 @@
                 </div>
                 <div class="col">
                     {{ form(form) }}
-{#                    {{ form_start(form) }}#}
-{#                    {{ form_row(form.name) }}#}
-{#                    {{ form_row(form.email) }}#}
-{#                    {{ form_row(form.message) }}#}
-{#                    <div class="custom-control custom-checkbox">#}
-{#                        <input class="custom-control-input" type="checkbox" id="ex-check-2" checked>#}
-{#                        {{ form_error(form.privacyPolicyAgreementAccepted) }}#}
-{#                        {{ form_widget(form.privacyPolicyAgreementAccepted) }}#}
-{#                        <label class="custom-control-label" for="ex-check-2">Uncheck <a href="{{ path('app_front_privacy_policy') }}" target="_blank">this</a> checkbox</label>#}
-{#                    </div>#}
-{#                    {{ form_rest(form) }}#}
-{#                    {{ form_end(form) }}#}
                 </div>
             </div>
         </div>

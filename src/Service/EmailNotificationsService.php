@@ -8,6 +8,7 @@ use Symfony\Bridge\Twig\Mime\NotificationEmail;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Address;
 
 class EmailNotificationsService
 {
@@ -27,8 +28,8 @@ class EmailNotificationsService
         $result = true;
         try {
             $email = (new TemplatedEmail())
-                ->from($this->adminManagerEmail)
-                ->to($this->adminManagerEmail)
+                ->from(new Address($this->adminManagerEmail))
+                ->to(new Address($this->adminManagerEmail))
                 ->subject('Consulta formulario web '.$this->frontProjectTitle)
                 ->htmlTemplate('email_notifications/web_contact_message_form_sended_notification_to_admin_manager.html.twig')
                 ->context([
@@ -37,9 +38,7 @@ class EmailNotificationsService
                 ])
             ;
             $this->mailer->send($email);
-        } catch (TransportExceptionInterface $e) {
-            $result = false;
-        } catch (Exception $e) {
+        } catch (TransportExceptionInterface | Exception $e) {
             $result = false;
         }
 
@@ -51,9 +50,9 @@ class EmailNotificationsService
         $result = true;
         try {
             $email = (new TemplatedEmail())
-                ->from($this->adminManagerEmail)
-                ->to($webContactMessage->getEmail())
-                ->subject('Consulta en formulario web '.$this->frontProjectTitle.' recibida')
+                ->from(new Address($this->adminManagerEmail))
+                ->to(new Address($webContactMessage->getEmail()))
+                ->subject('Consulta en formulario web '.$this->frontProjectTitle.' enviada')
                 ->htmlTemplate('email_notifications/web_contact_message_form_answer_notification_to_sender.html.twig')
                 ->context([
                     'importance' => NotificationEmail::IMPORTANCE_HIGH,
@@ -61,9 +60,7 @@ class EmailNotificationsService
                 ])
             ;
             $this->mailer->send($email);
-        } catch (TransportExceptionInterface $e) {
-            $result = false;
-        } catch (Exception $e) {
+        } catch (TransportExceptionInterface | Exception $e) {
             $result = false;
         }
 
