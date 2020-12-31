@@ -21,20 +21,22 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse mr-0" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link h5 mb-0" href="#home">{{ front_web_title | capitalize }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link h5 mb-0" href="#gestion">{{ 'front.menu.management' | trans | capitalize }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link h5 mb-0" href="#equipo">{{ 'front.menu.team' | trans | capitalize }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link h5 mb-0 pr-0" href="#contacto">{{ 'front.menu.contact' | trans | capitalize }}</a>
-                </li>
-            </ul>
+            {% block menu %}
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link h5 mb-0" href="#home">{{ front_web_title | capitalize }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link h5 mb-0" href="#gestion">{{ 'front.menu.management' | trans | capitalize }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link h5 mb-0" href="#equipo">{{ 'front.menu.team' | trans | capitalize }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link h5 mb-0 pr-0" href="#contacto">{{ 'front.menu.contact' | trans | capitalize }}</a>
+                    </li>
+                </ul>
+            {% endblock %}
         </div>
     </div>
 </nav>
