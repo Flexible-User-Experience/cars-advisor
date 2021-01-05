@@ -126,12 +126,22 @@
                     <p class="lead mb-0"><strong>No cobramos comisiones</strong>, el coste de nuestro servicio está incluido en el precio final que pagarás al concesionario oficial. Además podrás financiar la compra con el concesionario, tu banco de confianza, o si lo prefieres, <strong>nos encargamos de buscar la financiación por ti</strong>.</p>
                 </div>
             </div>
-            <div class="row mb-5">
+        </div>
+    </div>
+    <div id="equipo" class="jumbotron jumbotron-fluid bg-primary mb-0">
+        <div class="container text-center">
+            <h1 class="text-secondary mb-0">{{ 'front.menu.team' | trans | capitalize }}</h1>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid bg-white mb-0">
+        <div class="container">
+            <div class="row">
                 <div class="col">
-                    <hr class="hr-gradient">
+                    <p class="lead">Nuestra empresa está formada por un gran equipo de profesionales apasionados por el mundo del motor y la automoción. Combinamos nuestra dilatada <strong>experiencia con una visión innovadora</strong> y joven, adaptada a las nuevas tecnologías y poniendo nuestros clientes en el centro de todos nuestros esfuerzos por conseguir la excelencia en nuestro valor añadido.</p>
+                    <p class="lead mb-0">{{ generate_lorem_ipsum_by_paragraphs(1) }}</p>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mt-5">
                 <div class="col-xl-3 col-sm-4">
                     <div class="text-center mb-sm-0 mb-grid-gutter"><img src="{{ asset('build/icon_emoji_happy.svg') }}" alt="emoji happy icon" width="88">
                         <h3 class="h5 mb-0 pt-0 text-primary" style="font-size: 2.875rem">100%</h3>
@@ -153,56 +163,6 @@
             </div>
         </div>
     </div>
-    <div id="equipo" class="jumbotron jumbotron-fluid bg-primary mb-0">
-        <div class="container text-center">
-            <h1 class="text-secondary mb-0">{{ 'front.menu.team' | trans | capitalize }}</h1>
-        </div>
-    </div>
-    <div class="jumbotron jumbotron-fluid bg-white mb-0">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-6">
-                    <div class="card card-horizontal">
-                        <div class="card-img-top" style="background-image: url('{{ asset('build/01.jpg') }}');"></div>
-                        <div class="card-body">
-                            <h5 class="card-title">Johnny Lane</h5>
-                            <h6 class="card-subtitle text-muted">Director of Client Services</h6>
-                            <p class="card-text font-size-sm">{{ generate_lorem_ipsum_by_words(6) }}.</p>
-                            <ul class="list-unstyled mb-3 pb-1">
-                                <li class="nav-dark">
-                                    <a class="nav-link p-0 font-weight-normal" href="tel:(0034){{ front_web_phone }}">
-                                        <i class="cxi-iphone mr-1"></i> {{ front_web_phone }}
-                                    </a>
-                                </li>
-                                <li class="nav-dark mb-0">
-                                    <a class="nav-link p-0 font-weight-normal" href="mailto:{{ mailer_destination }}">
-                                        <i class="cxi-mail align-middle mr-1"></i> {{ mailer_destination }}
-                                    </a>
-                                </li>
-                            </ul>
-                            <a class="social-btn mr-2" href="#">
-                                <i class="cxi-facebook"></i>
-                            </a>
-                            <a class="social-btn mr-2" href="#">
-                                <i class="cxi-twitter"></i>
-                            </a>
-                            <a class="social-btn mr-2" href="#">
-                                <i class="cxi-linkedin"></i>
-                            </a>
-                            <a class="social-btn" href="#">
-                                <i class="cxi-google"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mt-5">
-                    <p class="lead mb-0">{{ generate_lorem_ipsum_by_paragraphs(1) }}</p>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="contacto" class="jumbotron jumbotron-fluid bg-secondary mb-0">
         <div class="container text-center">
             <h1 class="text-primary mb-0">Contacto</h1>
@@ -213,9 +173,7 @@
             <div class="row">
                 <div class="col">
                     <div class="card">
-                        <div class="card-img-top overflow-hidden">
-                            <iframe width="600" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d985265.6834686119!2d-73.53312098675273!3d41.40372595831977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e8483b8bffed93%3A0x53467ceb834b7397!2s396%20Lillian%20Blvd%2C%20Holbrook%2C%20NY%2011741%2C%20USA!5e0!3m2!1sen!2sua!4v1569318858921!5m2!1sen!2sua"></iframe>
-                        </div>
+                        <img class="card-img-top" src="{{ asset('build/image_contact.jpeg') }}" alt="contact image">
                         <div class="card-body">
                             <h3 class="h4">{{ front_web_title | capitalize }}</h3>
                             <ul class="mb-0 list-unstyled nav-dark">
@@ -232,15 +190,21 @@
                                     </a>
                                 </li>
                                 <li class="mb-2 pb-1">
-                                    <a class="d-flex nav-link font-weight-normal p-0" href="#">
-                                        <i class="cxi-clock mt-1 mr-2 pr-1 lead text-primary"></i>
-                                        Daily from 9 am to 9 pm
+                                    <a class="d-flex nav-link font-weight-normal p-0" href="#">{# TODO apply social network link #}
+                                        <i class="cxi-facebook mt-1 mr-2 pr-1 lead text-primary"></i>
+                                        carsadvisor
+                                    </a>
+                                </li>
+                                <li class="mb-2 pb-1">
+                                    <a class="d-flex nav-link font-weight-normal p-0" href="#">{# TODO apply social network link #}
+                                        <i class="cxi-instagram mt-1 mr-2 pr-1 lead text-primary"></i>
+                                        carsadvisor
                                     </a>
                                 </li>
                                 <li class="mb-2 pb-1">
                                     <a class="d-flex nav-link font-weight-normal p-0" href="#">
-                                        <i class="cxi-map-pin-outline mt-1 mr-2 pr-1 lead text-primary"></i>
-                                        8502 Preston Rd. Inglewood, NY 98380
+                                        <i class="cxi-clock mt-1 mr-2 pr-1 lead text-primary"></i>
+                                        De lunes a viernes, de 09:00h a 19:00h, excepto festivos.
                                     </a>
                                 </li>
                             </ul>
