@@ -50,19 +50,18 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col mt-5">
-                    <p class="lead mb-0">{{ generate_lorem_ipsum_by_paragraphs(1) }}</p>
-                </div>
-            </div>
+{#            <div class="row">#}
+{#                <div class="col mt-5">#}
+{#                    <p class="lead mb-0">{{ generate_lorem_ipsum_by_paragraphs(1) }}</p>#}
+{#                </div>#}
+{#            </div>#}
         </div>
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col mt-5">
-                    <!-- All controls inside: Dots + Arrows -->
                     <div class="cs-carousel">
                         <div class="cs-carousel-inner">
-                            <div><img src="{{ asset('build/01.jpeg') | imagine_filter('600x400') }}" alt="Slider image 01"></div>
+{#                            <div><img src="{{ asset('build/01.jpeg') | imagine_filter('600x400') }}" alt="Slider image 01"></div>#}
                             <div><img src="{{ asset('build/02.jpeg') | imagine_filter('600x400') }}" alt="Slider image 02"></div>
                             <div><img src="{{ asset('build/03.jpeg') | imagine_filter('600x400') }}" alt="Slider image 03"></div>
                             <div><img src="{{ asset('build/04.jpeg') | imagine_filter('600x400') }}" alt="Slider image 04"></div>
@@ -87,7 +86,7 @@
                     <div class="mb-sm-0 mb-grid-gutter">
                         <video autoplay="" loop="" muted="" playsinline="" poster="https://ak.picdn.net/shutterstock/videos/27728296/thumb/2.jpg" style="transform: rotate(0deg); width: 100%;"><source src="https://ak.picdn.net/shutterstock/videos/27728296/preview/stock-footage-happy-young-woman-leans-out-passenger-side-car-window-she-looks-in-wonder-and-awe-at-all-the.webm" type="video/webm"><source src="https://ak.picdn.net/shutterstock/videos/27728296/preview/stock-footage-happy-young-woman-leans-out-passenger-side-car-window-she-looks-in-wonder-and-awe-at-all-the.mp4" type="video/mp4"></video>
                         <h3 class="h5 mb-2">Atención personalizada</h3>
-                        <p class="mb-0 text-muted">Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.</p>
+{#                        <p class="mb-0 text-muted">Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.</p>#}
                     </div>
                 </div>
                 <span class="divider-vertical d-sm-block d-none"></span>
@@ -95,7 +94,7 @@
                     <div class="mb-sm-0 mb-grid-gutter">
                         <video autoplay="" loop="" muted="" playsinline="" poster="https://ak.picdn.net/shutterstock/videos/1016302870/thumb/1.jpg" style="transform: rotate(0deg); width: 100%;"><source src="https://ak.picdn.net/shutterstock/videos/1016302870/preview/stock-footage-aerial-top-down-dark-colored-car-driving-down-an-asphalt-road-crossing-the-vast-forest-on-a-sunny.webm" type="video/webm"><source src="https://ak.picdn.net/shutterstock/videos/1016302870/preview/stock-footage-aerial-top-down-dark-colored-car-driving-down-an-asphalt-road-crossing-the-vast-forest-on-a-sunny.mp4" type="video/mp4"></video>
                         <h3 class="h5 mb-2">Ahorra tiempo</h3>
-                        <p class="mb-0 text-muted">Culpa nostrud commodo ea consequat reprehenderit aliquip. </p>
+{#                        <p class="mb-0 text-muted">Culpa nostrud commodo ea consequat reprehenderit aliquip. </p>#}
                     </div>
                 </div>
                 <span class="divider-vertical d-sm-block d-none"></span>
@@ -103,7 +102,7 @@
                     <div class="text-left">
                         <video autoplay="" loop="" playsinline="" poster="https://ak.picdn.net/shutterstock/videos/1055094365/thumb/6.jpg" style="transform: rotate(0deg); width: 100%;"><source src="https://ak.picdn.net/shutterstock/videos/1055094365/preview/stock-footage-a-shot-under-the-hatch-where-the-electric-eco-car-charges.webm" type="video/webm"><source src="https://ak.picdn.net/shutterstock/videos/1055094365/preview/stock-footage-a-shot-under-the-hatch-where-the-electric-eco-car-charges.mp4" type="video/mp4"></video>
                         <h3 class="h5 mb-2">Ahorra dinero</h3>
-                        <p class="mb-0 text-muted">Viverra scelerisque consequat net. Adipisicing esse consequat. </p>
+{#                        <p class="mb-0 text-muted">Viverra scelerisque consequat net. Adipisicing esse consequat. </p>#}
                     </div>
                 </div>
             </div>
@@ -114,15 +113,15 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-xl-3 col-sm-4">
-                    <div class="text-center mb-sm-0 mb-grid-gutter"><img class="mb-3" src="{{ asset('build/04.svg') }}" alt="Icon box image" width="48">
-                        <h3 class="h5 mb-2 pt-1 text-primary" style="font-size: 2.875rem">85%</h3>
-                        <p class="mb-0 font-size-sm text-dark">Clients on&nbsp;the recommendation of&nbsp;friends</p>
+                    <div class="text-center mb-sm-0 mb-grid-gutter"><img src="{{ asset('build/icon_emoji_happy.svg') }}" alt="emoji happy icon" width="88">
+                        <h3 class="h5 mb-0 pt-0 text-primary" style="font-size: 2.875rem">100%</h3>
+                        <p class="mb-0 font-size-sm text-dark">Clientes satisfechos</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-4">
-                    <div class="text-center mb-sm-0 mb-grid-gutter"><img class="mb-3" src="{{ asset('build/05.svg') }}" alt="Icon box image" width="48">
-                        <h3 class="h5 mb-2 pt-1 text-primary" style="font-size: 2.875rem">2400+</h3>
-                        <p class="mb-0 font-size-sm text-dark">Cars renovated</p>
+                    <div class="text-center mb-sm-0 mb-grid-gutter"><img src="{{ asset('build/icon_key.svg') }}" alt="key icon" width="88">
+                        <h3 class="h5 mb-0 pt-0 text-primary" style="font-size: 2.875rem">2.400+</h3>
+                        <p class="mb-0 font-size-sm text-dark">Coches renovados</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-4">
