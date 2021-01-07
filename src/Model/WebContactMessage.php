@@ -7,6 +7,7 @@ class WebContactMessage
     private string $name;
     private string $email;
     private string $message;
+    private ?string $timetable;
 
     public function getName(): string
     {
@@ -44,7 +45,19 @@ class WebContactMessage
         return $this;
     }
 
-    public function __toString()
+    public function getTimetable(): ?string
+    {
+        return $this->timetable;
+    }
+
+    public function setTimetable(?string $timetable): WebContactMessage
+    {
+        $this->timetable = $timetable;
+
+        return $this;
+    }
+
+    public function __toString(): string
     {
         return $this->getName().' · '.$this->getEmail();
     }

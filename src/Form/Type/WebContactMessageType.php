@@ -54,6 +54,17 @@ class WebContactMessageType extends AbstractType
                 ]
             )
             ->add(
+                'timetable',
+                TextType::class,
+                [
+                    'label' => 'Horario de contacto',
+                    'required' => false,
+                    'attr' => [
+                        'class' => 'common-fields',
+                    ],
+                ]
+            )
+            ->add(
                 'message',
                 TextareaType::class,
                 [
@@ -75,9 +86,6 @@ class WebContactMessageType extends AbstractType
                     'required' => true,
                     'mapped' => false,
                     'label' => 'Acepto las condiciones legales',
-//                    'attr' => [
-//                        'class' => 'custom-control-input',
-//                    ],
                 ]
             )
             ->add(
