@@ -16,6 +16,14 @@
         </p>
     </callout>
     <spacer size="16"></spacer>
+    {% if web_contact_message.timetable %}
+        <callout class="danger">
+            <p>
+                Horario de contacto solicitado: <strong>{{ web_contact_message.timetable }}</strong><br>
+            </p>
+        </callout>
+        <spacer size="16"></spacer>
+    {% endif %}
     <button href="mailto:{{ web_contact_message.email }}?subject=Respuesta consulta formulario web {{ front_web_title | capitalize }}" class="rounded">Responder</button>
 {% endblock %}
 
