@@ -180,7 +180,7 @@
                     <div class="card">
                         <img class="card-img-top" src="{{ asset('build/image_contact.jpg') }}" alt="contact image">
                         <div class="card-body">
-                            <h3 class="h4">{{ front_web_title | capitalize }}</h3>
+                            <h3 class="h4 mb-2">{{ front_web_title | capitalize }}</h3>
                             <ul class="mb-0 list-unstyled nav-dark">
                                 <li class="mb-2 pb-1">
                                     <a class="d-flex nav-link font-weight-normal p-0" href="tel:(0034){{ front_web_phone }}">
@@ -194,23 +194,10 @@
                                         {{ mailer_destination }}
                                     </a>
                                 </li>
-                                <li class="mb-2 pb-1">
-                                    <a class="d-flex nav-link font-weight-normal p-0" href="#">{# TODO apply social network link #}
-                                        <i class="cxi-facebook mt-1 mr-2 pr-1 lead text-primary"></i>
-                                        carsadvisor
-                                    </a>
-                                </li>
-                                <li class="mb-2 pb-1">
-                                    <a class="d-flex nav-link font-weight-normal p-0" href="#">{# TODO apply social network link #}
-                                        <i class="cxi-instagram mt-1 mr-2 pr-1 lead text-primary"></i>
-                                        carsadvisor
-                                    </a>
-                                </li>
-                                <li class="mb-2 pb-1">
-                                    <a class="d-flex nav-link font-weight-normal p-0">
-                                        <i class="cxi-clock mt-1 mr-2 pr-1 lead text-primary"></i>
-                                        De lunes a viernes, de 09:00h a 19:00h, excepto festivos.
-                                    </a>
+                                <li class="mt-2">
+                                    <a style="width:3rem;height:3rem;font-size:2rem;" class="social-btn sb-solid mr-2 mt-2" href="#{# TODO apply social network link #}" target="_blank"><i class="cxi-facebook"></i></a>
+                                    <a style="width:3rem;height:3rem;font-size:2rem;" class="social-btn sb-solid mr-2 mt-2" href="#{# TODO apply social network link #}" target="_blank"><i class="cxi-instagram"></i></a>
+                                    <a style="width:3rem;height:3rem;font-size:2rem;" class="social-btn sb-solid mt-2" href="https://wa.me/0034{{ front_web_phone | replace({' ': ''}) }}?text=He+visto+su+web+{{ front_base_url }}+y+me+gustar%C3%ADa+que+contactara+conmigo+para+recibir+m%C3%A1s+informaci%C3%B3n+sobre+sus+servicios."><i class="cxi-whatsapp"></i></a>
                                 </li>
                             </ul>
                         </div>
