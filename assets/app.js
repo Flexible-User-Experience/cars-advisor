@@ -12,6 +12,14 @@ $(document).ready(function() {
         event.preventDefault();
         $.scrollTo(event.target.hash, 250, {offset: -90});
     });
+    $('#first_call_to_action_button').bind('click', 'a', function(event) {
+        event.preventDefault();
+        $.scrollTo('#contacto', 250, {offset: -90});
+    });
+    $('#second_call_to_action_button').bind('click', 'a', function(event) {
+        event.preventDefault();
+        $.scrollTo('#contacto', 250, {offset: -90});
+    });
     tns({
         container: '.cs-carousel-inner',
         mode: 'carousel',
