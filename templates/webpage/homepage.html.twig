@@ -61,12 +61,12 @@
                 <div class="col mt-5">
                     <div class="cs-carousel">
                         <div class="cs-carousel-inner">
-                            <div><img src="{{ asset('build/1.jpg') | imagine_filter('600x400') }}" alt="Slider image 1"></div>
-                            <div><img src="{{ asset('build/2.jpg') | imagine_filter('600x400') }}" alt="Slider image 2"></div>
                             <div><img src="{{ asset('build/3.jpg') | imagine_filter('600x400') }}" alt="Slider image 3"></div>
+                            <div><img src="{{ asset('build/2.jpg') | imagine_filter('600x400') }}" alt="Slider image 2"></div>
                             <div><img src="{{ asset('build/4.jpg') | imagine_filter('600x400') }}" alt="Slider image 4"></div>
                             <div><img src="{{ asset('build/5.jpg') | imagine_filter('600x400') }}" alt="Slider image 5"></div>
                             <div><img src="{{ asset('build/6.jpg') | imagine_filter('600x400') }}" alt="Slider image 6"></div>
+                            <div><img src="{{ asset('build/1.jpg') | imagine_filter('600x400') }}" alt="Slider image 1"></div>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,9 @@
             <div class="row mb-5">
                 <div class="col-md-6 col-lg-5 col-xl-4">
                     <div class="mb-sm-0 mb-grid-gutter">
-                        <video autoplay="" loop="" muted="" playsinline="" poster="https://ak.picdn.net/shutterstock/videos/27728296/thumb/2.jpg" style="transform: rotate(0deg); width: 100%;"><source src="https://ak.picdn.net/shutterstock/videos/27728296/preview/stock-footage-happy-young-woman-leans-out-passenger-side-car-window-she-looks-in-wonder-and-awe-at-all-the.webm" type="video/webm"><source src="https://ak.picdn.net/shutterstock/videos/27728296/preview/stock-footage-happy-young-woman-leans-out-passenger-side-car-window-she-looks-in-wonder-and-awe-at-all-the.mp4" type="video/mp4"></video>
+                        <video autoplay="" loop="" muted="" playsinline="" poster="https://ak.picdn.net/shutterstock/videos/27728296/thumb/2.jpg" style="transform: rotate(0deg); width: 100%;">
+                            <source src="{{ asset('build/1.mov') }}" type="video/mp4">
+                        </video>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-7 col-xl-8">
@@ -105,7 +107,9 @@
                     <button type="button" class="btn btn-translucent-primary"><i class="cxi-mail"></i> Quiero más información</button>{# TODO make clickable #}
                 </div>
                 <div class="col-md-6 col-lg-5 col-xl-4">
-                    <video autoplay="" loop="" muted="" playsinline="" poster="https://ak.picdn.net/shutterstock/videos/1016302870/thumb/1.jpg" style="transform: rotate(0deg); width: 100%;"><source src="https://ak.picdn.net/shutterstock/videos/1016302870/preview/stock-footage-aerial-top-down-dark-colored-car-driving-down-an-asphalt-road-crossing-the-vast-forest-on-a-sunny.webm" type="video/webm"><source src="https://ak.picdn.net/shutterstock/videos/1016302870/preview/stock-footage-aerial-top-down-dark-colored-car-driving-down-an-asphalt-road-crossing-the-vast-forest-on-a-sunny.mp4" type="video/mp4"></video>
+                    <video autoplay="" loop="" muted="" playsinline="" poster="https://ak.picdn.net/shutterstock/videos/1016302870/thumb/1.jpg" style="transform: rotate(0deg); width: 100%;">
+                        <source src="{{ asset('build/2.mov') }}" type="video/mp4">
+                    </video>
                 </div>
             </div>
             <div class="row mb-5">
@@ -116,7 +120,9 @@
             <div class="row mb-5">
                 <div class="col-md-6 col-lg-5 col-xl-4">
                     <div class="mb-sm-0 mb-grid-gutter">
-                        <video autoplay="" loop="" playsinline="" poster="https://ak.picdn.net/shutterstock/videos/1055094365/thumb/6.jpg" style="transform: rotate(0deg); width: 100%;"><source src="https://ak.picdn.net/shutterstock/videos/1055094365/preview/stock-footage-a-shot-under-the-hatch-where-the-electric-eco-car-charges.webm" type="video/webm"><source src="https://ak.picdn.net/shutterstock/videos/1055094365/preview/stock-footage-a-shot-under-the-hatch-where-the-electric-eco-car-charges.mp4" type="video/mp4"></video>
+                        <video autoplay="" loop="" playsinline="" poster="https://ak.picdn.net/shutterstock/videos/1055094365/thumb/6.jpg" style="transform: rotate(0deg); width: 100%;">
+                            <source src="{{ asset('build/3.mov') }}" type="video/mp4">
+                        </video>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-7 col-xl-8">

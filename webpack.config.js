@@ -17,6 +17,9 @@ Encore
     .copyFiles({
         from: './assets/fonts/'
     })
+    .copyFiles({
+        from: './assets/videos/'
+    })
     /*
      * ENTRY CONFIG
      */
