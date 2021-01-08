@@ -65,6 +65,7 @@ $(document).ready(function() {
         if (!cookieExists(cookieConsentName)) {
             $('#staticBackdropModal').modal('show');
         }
+        // TODO add Cookies policy doc inside same panel
         // TODO add GTM script
                     // helpers.createScript('https://www.googletagmanager.com/gtag/js?id=' + keys_api.gtag);
                     //
