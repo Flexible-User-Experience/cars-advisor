@@ -20,6 +20,7 @@ parameters:
     google_analytics_code:     '%env(string:GOOGLE_ANALYTICS_ACCOUNT)%'
     mailer_destination:        '%env(string:MAILER_DESTINATION)%'
     delivery_dev_address:      '%env(string:DEV_DELIVERY_ADDRESS)%'
+    app_cookie_session_name:   '_CA_SESSID'
 
 services:
     _defaults:

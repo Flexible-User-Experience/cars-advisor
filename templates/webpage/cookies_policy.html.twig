@@ -61,10 +61,16 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
+                            <td>{{ app_cookie_session_name }}</td>
+                            <td>Cookie técnica estrictamente necesaria</td>
+                            <td>1 año</td>
+                            <td>Se usa para identificar la sesión de usuario en nuestro servidor web</td>
+                        </tr>
+                        <tr>
+                            <td>{{ constant('App\\Enum\\CookieConsentNamesEnum::COOKIE_CONSENT') }}</td>
+                            <td>Cookie técnica estrictamente necesaria</td>
+                            <td>1 año</td>
+                            <td>Se usa para saber si es necesario mostrar el panel de consentimiento de cookies por primera vez</td>
                         </tr>
                         </tbody>
                     </table>

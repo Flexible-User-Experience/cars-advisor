@@ -1,0 +1,3 @@
+twig:
+    globals:
+        enable_cookies_consent: true

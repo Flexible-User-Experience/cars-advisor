@@ -1,5 +1,8 @@
 {% extends "webpage/base.html.twig" %}
 
+{% block style_link_tags %}{{ encore_entry_link_tags('slider') }}{% endblock %}
+{% block javascript_link_tags %}{{ encore_entry_script_tags('slider') }}{% endblock %}
+
 {% block body %}
     <div id="home" class="jumbotron jumbotron-fluid bg-white mb-0">
         <div class="container text-center">

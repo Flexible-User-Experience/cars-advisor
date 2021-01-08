@@ -23,6 +23,7 @@ Encore
      * ENTRY CONFIG
      */
     .addEntry('app', './assets/app.js')
+    .addEntry('slider', './assets/slider.js')
     /*
      * FEATURE CONFIG
      */
