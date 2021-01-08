@@ -11,7 +11,7 @@
     <title>{{ front_web_title | capitalize }}{% block title %} · Asesoría en la compra de vehículos nuevos{% endblock %}</title>
     {{ encore_entry_link_tags('app') }}
 </head>
-<body class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="110">
+<body id="app-body" class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="110" data-app-locale="{{ locale }}">
 <nav id="sections-menu" class="navbar fixed-top navbar-expand-lg navbar-light custom-navbar-bg-secondary">
     <div class="container-fluid px-0 px-xl-3">
         <a class="navbar-brand" href="{{ path('app_front_homepage') }}">

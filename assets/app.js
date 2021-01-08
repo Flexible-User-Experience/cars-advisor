@@ -2,11 +2,16 @@ import './styles/theme.scss';
 import 'tiny-slider/dist/tiny-slider.css';
 import 'jquery.scrollto';
 import { tns } from 'tiny-slider/src/tiny-slider'
+import initGdprCookie from 'gdpr-cookies';
 
 const $ = require('jquery');
 require('bootstrap');
 
 $(document).ready(function() {
+    let locale = document.getElementById('app-body').dataset.appLocale;
+    if (locale) {
+        initGdprCookie(locale);
+    }
     $('[data-toggle="popover"]').popover();
     $('#navbarSupportedContent').bind('click', 'ul li a', function(event) {
         event.preventDefault();

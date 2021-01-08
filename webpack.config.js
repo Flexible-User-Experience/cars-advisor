@@ -7,7 +7,6 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 Encore
     .setOutputPath('public/build/')
     .setPublicPath('/build')
-    //.setManifestKeyPrefix('build/')
     .copyFiles({
         from: './assets/images/'
     })
@@ -24,13 +23,11 @@ Encore
      * ENTRY CONFIG
      */
     .addEntry('app', './assets/app.js')
-    // .addEntry('theme', './assets/theme.js')
-    // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
-    .splitEntryChunks()
-    .enableSingleRuntimeChunk()
     /*
      * FEATURE CONFIG
      */
+    .splitEntryChunks()
+    .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
@@ -40,13 +37,6 @@ Encore
         config.corejs = 3;
     })
     .enableSassLoader()
-    // uncomment if you use TypeScript
-    //.enableTypeScriptLoader()
-    // uncomment to get integrity="..." attributes on your script & link tags
-    // requires WebpackEncoreBundle 1.4 or higher
-    //.enableIntegrityHashes(Encore.isProduction())
-    // uncomment if you're having problems with a jQuery plugin
-    // .autoProvidejQuery()
 ;
 
 module.exports = Encore.getWebpackConfig();
