@@ -14,6 +14,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-justify">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdropModal">
+                        Modificar cookies
+                    </button>
                     <h3>1. ANTECEDENTES</h3>
                     <p>
                         De conformidad con la normativa española que regula el uso de cookies en relación a la prestación de servicios de comunicaciones electrónicas, recogida en el artículo 22.2 de la Ley 34/2002, del 11 de julio, de servicios de la sociedad de la información y de comercio electrónico, le informamos sobre las cookies utilizadas en el sitio web de <strong>{{ front_legal_name }}</strong> y el motivo de su uso.
@@ -71,6 +74,12 @@
                             <td>Cookie técnica estrictamente necesaria</td>
                             <td>1 año</td>
                             <td>Se usa para saber si es necesario mostrar el panel de consentimiento de cookies por primera vez</td>
+                        </tr>
+                        <tr>
+                            <td>{{ constant('App\\Enum\\CookieConsentNamesEnum::COOKIE_CONSENT') }}_GTM</td>
+                            <td>Cookie técnica estrictamente necesaria</td>
+                            <td>1 año</td>
+                            <td>Se usa para saber si el usuario ha aceptado o rechazado las cookies de seguimiento analítico</td>
                         </tr>
                         </tbody>
                     </table>
