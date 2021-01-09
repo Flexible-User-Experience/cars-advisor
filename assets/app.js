@@ -6,14 +6,16 @@ const $ = require('jquery');
 require('bootstrap');
 
 $(document).ready(function() {
-    let locale = document.getElementById('app-body').dataset.appLocale;
-    let googleTagManagerId = document.getElementById('app-body').dataset.appGtm;
-    let cookieConsentName = document.getElementById('app-body').dataset.appCookieConsentName;
+    // Cookies management & behaviour
+    let appBody = document.getElementById('app-body');
+    let googleTagManagerId = appBody.dataset.appGtm;
+    let cookieConsent = appBody.dataset.appCookieConsent;
+    let cookieConsentGtm = appBody.dataset.appCookieConsentGtm;
     let cookiesConsentButtonDeclineAllNode = $('#cookies-consent-button-decline-all');
     let cookiesConsentButtonAcceptAllNode = $('#cookies-consent-button-accept-all');
     let customSwitch2Node = $('#customSwitch2');
     const cookieConsentOptions = {
-        name: cookieConsentName,
+        name: cookieConsent,
         value: 'yes',
         maxAge: 31536000, // 1 year
         path: '/',
@@ -24,7 +26,7 @@ $(document).ready(function() {
         event.preventDefault();
         setCookie(cookieConsentOptions);
         setCookie({
-            name: cookieConsentName+'_GTM',
+            name: cookieConsentGtm,
             value: 'no',
             maxAge: 31536000,
             path: '/',
@@ -33,10 +35,23 @@ $(document).ready(function() {
         });
         $('#staticBackdropModal').modal('hide');
     });
-    if (cookieExists(cookieConsentName+'_GTM') && cookieHasValue(cookieConsentName+'_GTM', 'yes')) {
+    cookiesConsentButtonAcceptAllNode.bind('click', 'button', function(event) {
+        event.preventDefault();
+        setCookie(cookieConsentOptions);
+        setCookie({
+            name: cookieConsentGtm,
+            value: 'yes',
+            maxAge: 31536000,
+            path: '/',
+            secure: false,
+            sameSite: 'lax'
+        });
+        $('#staticBackdropModal').modal('hide');
+    });
+    if (cookieExists(cookieConsentGtm) && cookieHasValue(cookieConsentGtm, 'yes')) {
         customSwitch2Node.prop('checked', true);
     }
-    if (cookieExists(cookieConsentName+'_GTM') && cookieHasValue(cookieConsentName+'_GTM', 'no')) {
+    if (cookieExists(cookieConsentGtm) && cookieHasValue(cookieConsentGtm, 'no')) {
         customSwitch2Node.prop('checked', false);
     }
     customSwitch2Node.bind('click', 'input', function() {
@@ -48,21 +63,9 @@ $(document).ready(function() {
             cookiesConsentButtonAcceptAllNode.prop('disabled', true);
         }
     });
-    cookiesConsentButtonAcceptAllNode.bind('click', 'button', function(event) {
-        event.preventDefault();
-        setCookie(cookieConsentOptions);
-        setCookie({
-            name: cookieConsentName+'_GTM',
-            value: 'yes',
-            maxAge: 31536000,
-            path: '/',
-            secure: false,
-            sameSite: 'lax'
-        });
-        $('#staticBackdropModal').modal('hide');
-    });
-    if (locale && googleTagManagerId) {
-        if (!cookieExists(cookieConsentName)) {
+
+    if (googleTagManagerId) {
+        if (!cookieExists(cookieConsent)) {
             $('#staticBackdropModal').modal('show');
         }
         // TODO add Cookies policy doc inside same panel
@@ -76,6 +79,7 @@ $(document).ready(function() {
                     // gtag('js', new Date());
                     // gtag('config', '########');
     }
+    // Bootstrap init & scroll on click behaviour in some UI elements
     $('[data-toggle="popover"]').popover();
     $('#navbarSupportedContent').bind('click', 'ul li a', function(event) {
         event.preventDefault();

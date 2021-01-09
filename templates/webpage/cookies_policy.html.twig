@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-md-12 text-justify">
                     <button type="button" class="btn btn-primary mb-5" data-toggle="modal" data-target="#staticBackdropModal">
-                        Modificar cookies
+                        Modificar consentimiento de cookies
                     </button>
                     <h3>1. ANTECEDENTES</h3>
                     <p>
@@ -76,10 +76,10 @@
                             <td>Se usa para saber si es necesario mostrar el panel de consentimiento de cookies por primera vez</td>
                         </tr>
                         <tr>
-                            <td>{{ constant('App\\Enum\\CookieConsentNamesEnum::COOKIE_CONSENT') }}_GTM</td>
+                            <td>{{ constant('App\\Enum\\CookieConsentNamesEnum::COOKIE_CONSENT_GTM') }}</td>
                             <td>Cookie técnica estrictamente necesaria</td>
                             <td>1 año</td>
-                            <td>Se usa para saber si el usuario ha aceptado o rechazado las cookies de seguimiento analítico</td>
+                            <td>Se usa para saber si el usuario ha aceptado o rechazado las cookies de seguimiento analítico y estadístico</td>
                         </tr>
                         </tbody>
                     </table>
@@ -101,9 +101,9 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
+                            <td>Google Inc.</td>
+                            <td>Análisis estadístico del sitio web a nivel de contabilización de visitantes, páginas visitadas, palabras clave utilizadas y similares</td>
+                            <td><a target="_blank" href="http://www.google.es/intl/es/policies/privacy/">www.google.es/intl/es/policies/privacy</a></td>
                         </tr>
                         </tbody>
                     </table>

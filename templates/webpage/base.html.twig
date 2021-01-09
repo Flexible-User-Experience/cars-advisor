@@ -17,7 +17,7 @@
 {#            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);#}
 {#        })(window,document,'script','dataLayer','GTM-KBQ8PJL');</script>#}
 </head>
-<body id="app-body" class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="110" data-app-locale="{{ locale }}" data-app-gtm="{{ google_analytics_code }}" data-app-cookie-consent-name="{{ constant('App\\Enum\\CookieConsentNamesEnum::COOKIE_CONSENT') }}">
+<body id="app-body" class="my-body" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="110" data-app-gtm="{{ google_analytics_code }}" data-app-cookie-consent="{{ constant('App\\Enum\\CookieConsentNamesEnum::COOKIE_CONSENT') }}" data-app-cookie-consent-gtm="{{ constant('App\\Enum\\CookieConsentNamesEnum::COOKIE_CONSENT_GTM') }}">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ google_analytics_code }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="modal fade" id="staticBackdropModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
