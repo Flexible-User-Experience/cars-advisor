@@ -33,7 +33,7 @@ $(document).ready(function() {
             secure: false,
             sameSite: 'lax'
         });
-        $('#staticBackdropModal').modal('hide');
+        $('#cookieStaticBackdropModal1').modal('hide');
     });
     cookiesConsentButtonAcceptAllNode.bind('click', 'button', function(event) {
         event.preventDefault();
@@ -46,7 +46,7 @@ $(document).ready(function() {
             secure: false,
             sameSite: 'lax'
         });
-        $('#staticBackdropModal').modal('hide');
+        $('#cookieStaticBackdropModal1').modal('hide');
     });
     if (cookieExists(cookieConsentGtm) && cookieHasValue(cookieConsentGtm, 'yes')) {
         customSwitch2Node.prop('checked', true);
@@ -66,7 +66,7 @@ $(document).ready(function() {
 
     if (googleTagManagerId) {
         if (!cookieExists(cookieConsent)) {
-            $('#staticBackdropModal').modal('show');
+            $('#cookieStaticBackdropModal1').modal('show');
         }
         // TODO add Cookies policy doc inside same panel
         // TODO add GTM script
