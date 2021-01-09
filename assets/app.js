@@ -1,6 +1,6 @@
 import './styles/theme.scss';
 import 'jquery.scrollto';
-import { cookieExists, cookieHasValue, setCookie } from 'cookies-utils';
+import { cookieExists, cookieHasValue, deleteCookie, setCookie } from 'cookies-utils';
 
 const $ = require('jquery');
 require('bootstrap');
@@ -42,6 +42,10 @@ $(document).ready(function() {
             sameSite: 'lax'
         });
         $('#cookieStaticBackdropModal1').modal('hide');
+        deleteCookie('_ga');
+        deleteCookie('_gat_carsadvidor.devel');
+        deleteCookie('_gat_carsadvidor.es');
+        deleteCookie('_gid');
     });
     cookiesConsentButtonAcceptAllNode.bind('click', 'button', function(event) {
         event.preventDefault();
@@ -55,7 +59,7 @@ $(document).ready(function() {
             sameSite: 'lax'
         });
         $('#cookieStaticBackdropModal1').modal('hide');
-        // TODO add GTM script
+        addGtmDynamicScript(googleTagManagerId);
     });
     if (cookieExists(cookieConsentGtm) && cookieHasValue(cookieConsentGtm, 'yes')) {
         customSwitch2Node.prop('checked', true);
@@ -77,16 +81,7 @@ $(document).ready(function() {
             $('#cookieStaticBackdropModal1').modal('show');
         } else {
             if (cookieExists(cookieConsentGtm) && cookieHasValue(cookieConsentGtm, 'yes')) {
-                let gtmScriptToAdd = document.createElement('script');
-                gtmScriptToAdd.type = 'text/javascript';
-                let gtmScriptTextNode = document.createTextNode(
-                    "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':" +
-                    "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0]," +
-                    "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=" +
-                    "'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);" +
-                    "})(window,document,'script','dataLayer','"+googleTagManagerId+"');");
-                gtmScriptToAdd.appendChild(gtmScriptTextNode);
-                document.head.appendChild(gtmScriptToAdd);
+                addGtmDynamicScript(googleTagManagerId);
             }
         }
     }
@@ -105,3 +100,16 @@ $(document).ready(function() {
         $.scrollTo('#contacto', 250, {offset: -90});
     });
 });
+
+function addGtmDynamicScript(googleTagManagerId) {
+    let gtmScriptToAdd = document.createElement('script');
+    gtmScriptToAdd.type = 'text/javascript';
+    let gtmScriptTextNode = document.createTextNode(
+        "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':" +
+        "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0]," +
+        "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=" +
+        "'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);" +
+        "})(window,document,'script','dataLayer','"+googleTagManagerId+"');");
+    gtmScriptToAdd.appendChild(gtmScriptTextNode);
+    document.head.appendChild(gtmScriptToAdd);
+}
