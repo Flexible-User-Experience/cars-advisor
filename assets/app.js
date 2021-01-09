@@ -14,6 +14,14 @@ $(document).ready(function() {
     let cookiesConsentButtonDeclineAllNode = $('#cookies-consent-button-decline-all');
     let cookiesConsentButtonAcceptAllNode = $('#cookies-consent-button-accept-all');
     let customSwitch2Node = $('#customSwitch2');
+    $('#cookie-modal2-opener-button').bind('click', 'button', function(event) {
+        $('#cookieStaticBackdropModal1').modal('hide');
+        $('#cookieStaticBackdropModal2').modal('show');
+    });
+    $('#cookie-modal1-opener-button').bind('click', 'button', function(event) {
+        $('#cookieStaticBackdropModal1').modal('show');
+        $('#cookieStaticBackdropModal2').modal('hide');
+    });
     const cookieConsentOptions = {
         name: cookieConsent,
         value: 'yes',
