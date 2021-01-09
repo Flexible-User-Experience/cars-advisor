@@ -55,6 +55,7 @@ $(document).ready(function() {
             sameSite: 'lax'
         });
         $('#cookieStaticBackdropModal1').modal('hide');
+        // TODO add GTM script
     });
     if (cookieExists(cookieConsentGtm) && cookieHasValue(cookieConsentGtm, 'yes')) {
         customSwitch2Node.prop('checked', true);
@@ -71,21 +72,23 @@ $(document).ready(function() {
             cookiesConsentButtonAcceptAllNode.prop('disabled', true);
         }
     });
-
     if (googleTagManagerId) {
         if (!cookieExists(cookieConsent)) {
             $('#cookieStaticBackdropModal1').modal('show');
+        } else {
+            if (cookieExists(cookieConsentGtm) && cookieHasValue(cookieConsentGtm, 'yes')) {
+                let gtmScriptToAdd = document.createElement('script');
+                gtmScriptToAdd.type = 'text/javascript';
+                let gtmScriptTextNode = document.createTextNode(
+                    "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':" +
+                    "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0]," +
+                    "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=" +
+                    "'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);" +
+                    "})(window,document,'script','dataLayer','"+googleTagManagerId+"');");
+                gtmScriptToAdd.appendChild(gtmScriptTextNode);
+                document.head.appendChild(gtmScriptToAdd);
+            }
         }
-        // TODO add Cookies policy doc inside same panel
-        // TODO add GTM script
-                    // helpers.createScript('https://www.googletagmanager.com/gtag/js?id=' + keys_api.gtag);
-                    //
-                    // window.dataLayer = window.dataLayer || [];
-                    // function gtag() {
-                    //     dataLayer.push(arguments)
-                    // }
-                    // gtag('js', new Date());
-                    // gtag('config', '########');
     }
     // Bootstrap init & scroll on click behaviour in some UI elements
     $('[data-toggle="popover"]').popover();
