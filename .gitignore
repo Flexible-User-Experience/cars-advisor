@@ -8,6 +8,9 @@
 !/public/uploads/images/.gitkeep
 !.travis.yml
 /src/.preload.php
+.env
+.php-version
+.idea/
 ###< app/bundle ###
 
 ###> symfony/framework-bundle ###
